@@ -1,97 +1,36 @@
 {
   "nodes": [
     {
-      "id": "94745973",
+      "id": "f27b8b15",
       "type": "function",
-      "name": "Hello!",
-      "outputs": 1,
-      "memorySize": 128,
-      "timeout": 30,
-      "runtime": "nodejs8",
-      "location": "inline",
-      "noerr": true,
-      "x": 400,
-      "y": 185,
-      "wires": [
-        []
-      ]
-    },
-    {
-      "id": "aa6df480",
-      "type": "function",
-      "name": "Echo",
-      "outputs": 1,
-      "memorySize": 128,
-      "timeout": 30,
-      "runtime": "nodejs8",
-      "location": "inline",
-      "noerr": true,
-      "x": 400,
-      "y": 285,
-      "wires": [
-        []
-      ]
-    },
-    {
-      "id": "2db63813",
-      "type": "http",
-      "x": 197.5,
-      "y": 235,
-      "width": 185,
-      "height": 260
-    },
-    {
-      "id": "7875c973",
-      "type": "restApiEndpoint",
-      "x": 185,
-      "y": 185,
-      "name": "",
-      "path": "/",
-      "method": "GET",
-      "wires": [
-        [
-          "94745973"
-        ]
-      ]
-    },
-    {
-      "id": "63ff8f5c",
-      "type": "restApiEndpoint",
-      "x": 195,
-      "y": 285,
-      "name": "",
-      "path": "/{message}",
-      "method": "GET",
-      "wires": [
-        [
-          "aa6df480"
-        ]
-      ]
-    },
-    {
-      "id": "c038759",
-      "type": "errors",
-      "x": 200,
-      "y": 400,
-      "wires": [
-        [
-          "9ab6f35d"
-        ]
-      ]
-    },
-    {
-      "id": "9ab6f35d",
-      "type": "function",
-      "x": 410,
-      "y": 400,
-      "name": "LogErrors",
+      "x": 265,
+      "y": 205,
+      "width": 100,
+      "height": 30,
+      "name": "githubToS3",
       "outputs": 1,
       "memorySize": 3008,
       "timeout": 30,
-      "runtime": "nodejs8",
+      "runtime": "nodejs",
       "location": "inline",
       "envVars": {},
       "entryPoint": "",
+      "wires": [
+        [
+          "ae712b89"
+        ]
+      ]
+    },
+    {
+      "id": "ae712b89",
+      "type": "objectStore",
+      "x": 485,
+      "y": 200,
+      "width": 100,
+      "height": 30,
+      "name": "HTML Store",
+      "publicPermissions": "read",
+      "websiteHosting": true,
       "wires": [
         []
       ]
