@@ -26,7 +26,7 @@ module.exports = async event {
         await cfnCR.sendFailure(err.message, event);
       } else {
         console.dir(data);
-        await cfnCR.sendFailure(err.message, event);
+        await cfnCR.sendSuccess('s3-copy', {}, event);
       }
     })
   });
