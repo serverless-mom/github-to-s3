@@ -1,0 +1,10 @@
+{
+  "Resources": {
+    "githubToS3": {
+      "Type": "Custom::githubToS3",
+      "Properties": {
+        "ServiceToken": { "Fn::GetAtt": [ "f27b8b15", "Arn" ] }
+      }
+    }
+  }
+}
