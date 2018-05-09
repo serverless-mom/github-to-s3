@@ -34,15 +34,6 @@
       "wires": [
         []
       ]
-    },
-    {
-      "id": "d681588d",
-      "type": "custom",
-      "x": 285,
-      "y": 400,
-      "width": 100,
-      "height": 30,
-      "name": "lambdaOnDeploy"
     }
   ]
 }
